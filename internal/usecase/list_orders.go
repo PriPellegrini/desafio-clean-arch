@@ -12,7 +12,7 @@ type ListOrdersUseCase struct {
 	OrderRepository entity.OrderRepositoryInterface
 }
 
-func NewListOrdersUseCAse(
+func NewListOrdersUseCase(
 	OrderRepository entity.OrderRepositoryInterface,
 ) *ListOrdersUseCase {
 	return &ListOrdersUseCase{
