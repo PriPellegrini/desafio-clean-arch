@@ -37,8 +37,7 @@ Este projeto implementa uma API usando Clean Architecture e Api Rest, GraphQL e 
 
 1. **Pré-requisitos**
    - Docker
-   - Go 1.16+
-   - Protoc (para gRPC)
+   - Docker Compose
 
 2. **Configuração do Ambiente**
    ```bash
@@ -50,18 +49,12 @@ Este projeto implementa uma API usando Clean Architecture e Api Rest, GraphQL e 
    docker-compose up -d
    ```
 
-3. **Gerar arquivos gRPC**
-   ```bash
-   protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/order.proto
-   ```
-
-4. **Executar a Aplicação**
-   ```bash
-   cd cmd/ordersystem
-   go run main.go wire.go
-   ```
-
-5. **Testar as APIs**
+3. **Testar as APIs**
    - REST: Use o Postman ou curl
    - GraphQL: Acesse o playground em `http://localhost:8080`
-   - gRPC: Use o Evans CLI
+   - gRPC: Use o Evans CLI (já instalado no container)
+
+4. **Parar os Containers (quando necessário)**
+   ```bash
+   docker-compose down
+   ```
