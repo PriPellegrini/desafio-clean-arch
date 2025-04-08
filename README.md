@@ -6,6 +6,13 @@ Este projeto implementa uma API usando Clean Architecture e Api Rest, GraphQL e 
 
 - **API REST**: `http://localhost:8000`
   - POST /order - Criar pedido
+    ```json
+    {
+      "id": "123",
+      "price": 100.00,
+      "tax": 10.00
+    }
+    ```
   - GET /orders - Listar pedidos
 
 - **GraphQL**: `http://localhost:8080`
