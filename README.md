@@ -52,12 +52,21 @@ Este projeto implementa uma API usando Clean Architecture e Api Rest, GraphQL e 
    git clone [URL_DO_REPOSITORIO]
    cd desafio-clean-arch
 
-   # Iniciar os containers
-   docker-compose up -d
+   # Buildar e iniciar os containers
+   docker-compose up --build -d
    ```
 
 3. **Testar as APIs**
    - REST: Use o Postman ou curl
+     ```bash
+     # Criar pedido
+     curl -X POST http://localhost:8000/order \
+       -H "Content-Type: application/json" \
+       -d '{"id": "123", "price": 100.00, "tax": 10.00}'
+
+     # Listar pedidos
+     curl http://localhost:8000/orders
+     ```
    - GraphQL: Acesse o playground em `http://localhost:8080`
    - gRPC: Use o Evans CLI (já instalado no container)
 
